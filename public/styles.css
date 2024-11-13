@@ -6,9 +6,9 @@
 }
 
 body { /*changes appearance of content in body sections*/
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8;
     color: #333;
     padding: 20px;
 }
@@ -59,6 +59,18 @@ h1, h2 { /*changes headings in home page*/
 p { /*changes appearance in <p>*/
     margin-bottom: 20px;
     color: #555;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: circle;  /*hollow circle bullet point*/
 }
 
 /*About Page*/

@@ -39,10 +39,18 @@ app.post('/submit', (req, res) => {  // /submit route: receives form data from c
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) { // if email was not successfully sent
             console.error('Error sending email:', error);
-            return res.status(500).send('An error occurred. Try again.');
+            return res.status(500).send(`
+                <div class="error-message" style="background-color: #dc3545; color: white; padding: 20px; text-align: center; border-radius: 8px;">
+                    An error occurred. Try again.
+                </div>
+            `);
         }
         console.log('Email sent:', info.response); 
-        res.status(200).send('Your message was sent!'); // if email sent successfully
+        res.status(200).send(`
+            <div class="success-message" style="background-color: #28a745; color: white; padding: 20px; text-align: center; border-radius: 8px;">
+                Your message was sent!
+            </div>
+        `); // if email sent successfully
     });
 });
 
